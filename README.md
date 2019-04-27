@@ -1,4 +1,4 @@
-sk89q-command-framework
+sk89q-command-framework [![](https://jitpack.io/v/OvercastNetwork/sk89q-command-framework.svg)](https://jitpack.io/#OvercastNetwork/sk89q-command-framework)
 =======================
 
 **NOTE**: This repository is no longer maintained, but a [second iteration](https://github.com/Electroid/intake) of this framework is still active.
@@ -13,6 +13,24 @@ You need to have Maven installed (http://maven.apache.org). Once installed, simp
     mvn clean install
 
 Maven will automatically download dependencies for you. Note: For that to work, be sure to add Maven to your "PATH".
+
+Distribution
+------------
+
+```xml
+<repository>
+  <id>jitpack.io</id>
+  <url>https://jitpack.io</url>
+</repository>
+```
+
+```xml
+<dependency>
+    <groupId>com.github.OvercastNetwork.sk89q-command-framework</groupId>
+    <artifactId>command-framework-bukkit</artifactId>
+    <version>master-SNAPSHOT</version>
+</dependency>
+```
 
 Contributing
 ------------
