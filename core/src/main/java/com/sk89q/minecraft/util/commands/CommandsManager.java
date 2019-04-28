@@ -432,7 +432,7 @@ public abstract class CommandsManager<T> {
      * @param methodArgs method arguments
      * @throws CommandException thrown when the command throws an error
      */
-    public void execute(String cmd, String[] args, T player, Object... methodArgs) throws CommandException {
+    protected void execute(String cmd, String[] args, T player, Object... methodArgs) throws CommandException {
         executeMethod(false, cmd, args, player, methodArgs);
     }
 
@@ -450,7 +450,7 @@ public abstract class CommandsManager<T> {
         }
     }
 
-    private List<String> executeMethod(boolean completing, String cmd, String[] args, T player, Object... methodArgs) throws CommandException {
+    protected List<String> executeMethod(boolean completing, String cmd, String[] args, T player, Object... methodArgs) throws CommandException {
         String[] newArgs = new String[args.length + 1];
         System.arraycopy(args, 0, newArgs, 1, args.length);
         newArgs[0] = cmd;
@@ -476,7 +476,7 @@ public abstract class CommandsManager<T> {
      * @throws CommandException thrown on a command error
      */
 
-    private List<String> executeMethod(Method parent, boolean completing, String[] args, T player, Object[] methodArgs, int level) throws CommandException {
+    protected List<String> executeMethod(Method parent, boolean completing, String[] args, T player, Object[] methodArgs, int level) throws CommandException {
         final String cmdName = args[level];
         final String cmdNameLower = cmdName.toLowerCase();
         final int argsCount = args.length - 1 - level;
